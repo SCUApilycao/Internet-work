@@ -1,0 +1,18 @@
+---
+title: 20190520曹宇翔
+author: Apily
+date: '2019-05-20'
+slug: 20190520apily
+categories: []
+tags: []
+---
+# 爬取“求是网《打打谈谈两由之》”
+https://lpl.qq.com/es/schedule.shtml
+```{r}
+library(rvest)
+url<-'http://www.qstheory.cn/dukan/qs/2019-05/16/c_1124491512.htm?spm=zm5062-001.0.0.1.PlpiXU'
+web<-read_html(url,encoding="utf-8") 
+position<-web %>% html_nodes("div.content")%>% html_text()
+print(position)
+```
+
