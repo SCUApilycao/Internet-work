@@ -1,0 +1,21 @@
+---
+title: mon ggpot2
+author: Apily
+date: '2019-06-17'
+slug: mon-ggpot2
+categories: []
+tags: []
+---
+
+
+
+<pre class="r"><code>dose&lt;-c(20,30,40,45,60)
+drugA&lt;-c(16,20,27,40,60)
+plot(dose,drugA,type=&quot;b&quot;)
+
+name &lt;- c(&quot;多&quot;,&quot;中&quot;,&quot;少&quot;,&quot;中&quot;,&quot;少&quot;)
+data &lt;- data.frame(name)
+library(ggplot2)</code></pre>
+<p><img src="/post/2019-06-17-mon-ggpot2_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data,aes(x=name)) + geom_bar()</code></pre>
+<p><img src="/post/2019-06-17-mon-ggpot2_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>

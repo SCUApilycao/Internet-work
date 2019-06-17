@@ -1,0 +1,19 @@
+---
+title: mon ggpot2
+author: Apily
+date: '2019-06-17'
+slug: mon-ggpot2
+categories: []
+tags: []
+---
+```{r}
+dose<-c(20,30,40,45,60)
+drugA<-c(16,20,27,40,60)
+plot(dose,drugA,type="b")
+
+name <- c("多","中","少","中","少")
+data <- data.frame(name)
+library(ggplot2)
+
+ggplot(data,aes(x=name)) + geom_bar()
+```
