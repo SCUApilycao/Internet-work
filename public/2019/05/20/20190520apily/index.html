@@ -73,6 +73,11 @@
 
     <div class="article-content">
       
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<link href="/rmarkdown-libs/wordcloud2/wordcloud.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/wordcloud2/wordcloud2-all.js"></script>
+<script src="/rmarkdown-libs/wordcloud2/hover.js"></script>
+<script src="/rmarkdown-libs/wordcloud2-binding/wordcloud2.js"></script>
 
 
 <div id="section" class="section level1">
@@ -391,7 +396,13 @@ table(seg)</code></pre>
 ##         作者           做         做好 
 ##            1            1            3</code></pre>
 <pre class="r"><code>f&lt;-freq(seg)
-f&lt;-f[order(f[2],decreasing=TRUE),] #根据词频降序排列</code></pre>
+f2&lt;-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
+
+library(wordcloud2)
+f2&lt;-f2[1:150,]
+wordcloud2(f2,size = 0.8,shape = &#39;star&#39;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"word":["的","中国","　","美国","是","了","和","中美","对","经济","诚意","中方","在","美方","有","发展","磋商","经贸","人民","关税","稳","世界","合作","以","打","原则","上","都","摩擦","不","这","关切","企业","就","贸易","负责","将","为","地","给","施压","要","并","去","中","也","尊严","投资","很","贸易战","要求","稳定","更加","通过","任","被","年","极限","经贸关系","产品","协议","国家","最大","问题","可能","应对","回应","从","两国","美","做好","应该","越","加征","赢","共","商品","作出","与","基础","国际","理性","巨大","态度","霸凌","把","谈","亿美元","开放","清楚","之","解决","评论","代表团","双方","出发","这样","带来","超过","谈判","对于","实际","下","体现","共同","伤害","打打","谈谈","消费者","网站","我们","准备","愈","不知","能","期待","到","只是","组织","损害","相关","一千","无论","接受","耐力","就业","各国","从来","却","保护主义","结果","指责","大国","不成","坚持","又","大","全球化","怎么","所","达成协议","太平洋","如约","论","压力","声明","致力于","00","两由","一年多来"],"freq":[91,55,44,38,26,24,19,16,15,14,14,14,13,11,10,9,9,9,8,8,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":1.58241758241758,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"star","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 </div>
 
     </div>

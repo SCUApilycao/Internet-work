@@ -21,7 +21,11 @@ engine_s<-worker(stop_word = "stopwords.txt")#初始化分词引擎并加载停�
 seg<-segment(position,engine_s)#分词
 table(seg)
 f<-freq(seg)
-f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
+f2<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
+
+library(wordcloud2)
+f2<-f2[1:150,]
+wordcloud2(f2,size = 0.8,shape = 'star')
 
 ```
 
