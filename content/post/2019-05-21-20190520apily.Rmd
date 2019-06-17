@@ -17,8 +17,9 @@ position<-web %>% html_nodes("div.content")%>% html_text()
 print(position)
 
 library(jiebaR)
-engine_s<-worker()#初始化分词引擎并加载停用词。
+engine_s<-worker(stop_word = "stopwords.txt")#初始化分词引擎并加载停用词。
 seg<-segment(position,engine_s)#分词
+table(seg)
 f<-freq(seg)
 f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
 
