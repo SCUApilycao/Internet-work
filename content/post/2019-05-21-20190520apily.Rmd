@@ -8,11 +8,19 @@ tags: []
 ---
 # 爬取“求是网《打打谈谈两由之》”
 https://lpl.qq.com/es/schedule.shtml
+
 ```{r}
 library(rvest)
 url<-'http://www.qstheory.cn/dukan/qs/2019-05/16/c_1124491512.htm?spm=zm5062-001.0.0.1.PlpiXU'
 web<-read_html(url,encoding="utf-8") 
 position<-web %>% html_nodes("div.content")%>% html_text()
 print(position)
+
+library(jiebaR)
+engine_s<-worker()#初始化分词引擎并加载停用词。
+seg<-segment(position,engine_s)#分词
+f<-freq(seg)
+f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
+
 ```
 
