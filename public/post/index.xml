@@ -17,7 +17,7 @@
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/17/mon-ggpot2/</guid>
-      <description>dose&amp;lt;-c(20,30,40,45,60)drugA&amp;lt;-c(16,20,27,40,60)plot(dose,drugA,type=&amp;quot;b&amp;quot;)name &amp;lt;- c(&amp;quot;多&amp;quot;,&amp;quot;中&amp;quot;,&amp;quot;少&amp;quot;,&amp;quot;中&amp;quot;,&amp;quot;少&amp;quot;)data &amp;lt;- data.frame(name)library(ggplot2)ggplot(data,aes(x=name)) + geom_bar()</description>
+      <description>dose&amp;lt;-c(20,30,40,45,60)drugA&amp;lt;-c(16,20,27,40,60)plot(dose,drugA,type=&amp;quot;b&amp;quot;)library(ggplot2)p1 &amp;lt;- ggplot(mpg, aes(x = hwy))p1 + geom_histogram()## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.##还可以上色和加拟合线p1 + geom_histogram(aes(fill = factor(year), y = ..density..),alpha = 0.3, colour = &amp;#39;black&amp;#39;) +stat_density(geom = &amp;#39;line&amp;#39;, position = &amp;#39;identity&amp;#39;, size = 1.5,aes(colour = factor(year))) +facet_wrap(~ year, ncol = 1)## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.library(ggplot2)p &amp;lt;- ggplot(data = mpg, mapping = aes(x = cty, y = hwy))p + geom_point()##还可以换颜色p &amp;lt;- ggplot(mpg, aes(x = cty, y = hwy, colour = factor(year)))p + geom_point()</description>
     </item>
     
     <item>

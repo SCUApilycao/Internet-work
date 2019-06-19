@@ -11,9 +11,24 @@ dose<-c(20,30,40,45,60)
 drugA<-c(16,20,27,40,60)
 plot(dose,drugA,type="b")
 
-name <- c("多","中","少","中","少")
-data <- data.frame(name)
 library(ggplot2)
+p1 <- ggplot(mpg, aes(x = hwy))
+p1 + geom_histogram()
 
-ggplot(data,aes(x=name)) + geom_bar()
+##还可以上色和加拟合线
+p1 + geom_histogram(aes(fill = factor(year), y = ..density..),
+                    alpha = 0.3, colour = 'black') +
+  stat_density(geom = 'line', position = 'identity', size = 1.5,
+               aes(colour = factor(year))) +
+  facet_wrap(~ year, ncol = 1)
+
+
+
+library(ggplot2)
+p <- ggplot(data = mpg, mapping = aes(x = cty, y = hwy))
+p + geom_point()
+
+##还可以换颜色
+p <- ggplot(mpg, aes(x = cty, y = hwy, colour = factor(year)))
+p + geom_point()
 ```
