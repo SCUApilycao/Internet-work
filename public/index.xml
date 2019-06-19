@@ -6,10 +6,28 @@
     <description>Recent content on The Music Skyscraper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>the function</title>
+      <link>/2019/06/19/the-function/</link>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/19/the-function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>时间序列分析</title>
+      <link>/2019/06/19/time-order/</link>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/19/time-order/</guid>
+      <description>plot(Nile,type=&amp;quot;l&amp;quot;) plot(Nile,type=&amp;quot;l&amp;quot;,xlab=&amp;quot;时间&amp;quot;,ylab=&amp;quot;尼罗河流量&amp;quot;) acf(Nile,main=&amp;quot;自相关图&amp;quot;)  opar&amp;lt;-par(mfrow=c(2,1))plot(Nile,type=&amp;quot;l&amp;quot;,xlab=&amp;quot;时间&amp;quot;,ylab=&amp;quot;尼罗河流量&amp;quot;)acf(Nile,main=&amp;quot;自相关图&amp;quot;) par(opar)</description>
+    </item>
     
     <item>
       <title>mon ggpot2</title>

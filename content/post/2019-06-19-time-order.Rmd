@@ -1,0 +1,18 @@
+---
+title: 时间序列分析
+author: Apily
+date: '2019-06-19'
+slug: time-order
+categories: []
+tags: []
+---
+```{r}
+plot(Nile,type="l")
+ plot(Nile,type="l",xlab="时间",ylab="尼罗河流量")
+ acf(Nile,main="自相关图")  
+ opar<-par(mfrow=c(2,1))
+ plot(Nile,type="l",xlab="时间",ylab="尼罗河流量")
+ acf(Nile,main="自相关图")
+ par(opar)
+
+```
