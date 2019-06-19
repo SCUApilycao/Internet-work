@@ -1,8 +1,26 @@
 ---
-title: the function
+title: 函数编写
 author: Apily
 date: '2019-06-19'
 slug: the-function
 categories: []
 tags: []
 ---
+##想看看距离自己出生已经过去了多少秒
+```{r}
+t<-Sys.time()
+unclass(t)
+g<-as.Date("2000-6-12")
+difftime(t,g,units="secs")
+```
+##获取一天前的日期
+```{r}
+t<-Sys.Date()
+as.POSIXlt(t-1)
+```
+##自定义时间格式
+```{r}
+t<-Sys.Date()
+format(t,format="%Y-%m-%d")
+format(t,format="%B-%d-%Y")
+```

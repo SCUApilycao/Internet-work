@@ -12,12 +12,15 @@
     
     
     <item>
-      <title>the function</title>
+      <title>函数编写</title>
       <link>/2019/06/19/the-function/</link>
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/19/the-function/</guid>
-      <description></description>
+      <description>##想看看距离自己出生已经过去了多少秒
+t&amp;lt;-Sys.time()unclass(t)## [1] 1560910841g&amp;lt;-as.Date(&amp;quot;2000-6-12&amp;quot;)difftime(t,g,units=&amp;quot;secs&amp;quot;)## Time difference of 600142841 secs##获取一天前的日期
+t&amp;lt;-Sys.Date()as.POSIXlt(t-1)## [1] &amp;quot;2019-06-18 UTC&amp;quot;##自定义时间格式
+t&amp;lt;-Sys.Date()format(t,format=&amp;quot;%Y-%m-%d&amp;quot;)## [1] &amp;quot;2019-06-19&amp;quot;format(t,format=&amp;quot;%B-%d-%Y&amp;quot;)## [1] &amp;quot;六月-19-2019&amp;quot;</description>
     </item>
     
     <item>

@@ -1,5 +1,5 @@
 ---
-title: the function
+title: 函数编写
 author: Apily
 date: '2019-06-19'
 slug: the-function
@@ -9,4 +9,20 @@ tags: []
 
 
 
-
+<p>##想看看距离自己出生已经过去了多少秒</p>
+<pre class="r"><code>t&lt;-Sys.time()
+unclass(t)</code></pre>
+<pre><code>## [1] 1560910841</code></pre>
+<pre class="r"><code>g&lt;-as.Date(&quot;2000-6-12&quot;)
+difftime(t,g,units=&quot;secs&quot;)</code></pre>
+<pre><code>## Time difference of 600142841 secs</code></pre>
+<p>##获取一天前的日期</p>
+<pre class="r"><code>t&lt;-Sys.Date()
+as.POSIXlt(t-1)</code></pre>
+<pre><code>## [1] &quot;2019-06-18 UTC&quot;</code></pre>
+<p>##自定义时间格式</p>
+<pre class="r"><code>t&lt;-Sys.Date()
+format(t,format=&quot;%Y-%m-%d&quot;)</code></pre>
+<pre><code>## [1] &quot;2019-06-19&quot;</code></pre>
+<pre class="r"><code>format(t,format=&quot;%B-%d-%Y&quot;)</code></pre>
+<pre><code>## [1] &quot;六月-19-2019&quot;</code></pre>

@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.55.4" />
 
 
-<title>the function - The Music Skyscraper</title>
-<meta property="og:title" content="the function - The Music Skyscraper">
+<title>函数编写 - The Music Skyscraper</title>
+<meta property="og:title" content="函数编写 - The Music Skyscraper">
 
 
   <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -19,6 +19,11 @@
 
 
 
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
 
 
 
@@ -57,10 +62,10 @@
 
   <article class="article">
     
-    <span class="article-duration">0 min read</span>
+    <span class="article-duration">1 min read</span>
     
 
-    <h1 class="article-title">the function</h1>
+    <h1 class="article-title">函数编写</h1>
 
     
     <span class="article-date">2019-06-19</span>
@@ -70,7 +75,23 @@
       
 
 
-
+<p>##想看看距离自己出生已经过去了多少秒</p>
+<pre class="r"><code>t&lt;-Sys.time()
+unclass(t)</code></pre>
+<pre><code>## [1] 1560910841</code></pre>
+<pre class="r"><code>g&lt;-as.Date(&quot;2000-6-12&quot;)
+difftime(t,g,units=&quot;secs&quot;)</code></pre>
+<pre><code>## Time difference of 600142841 secs</code></pre>
+<p>##获取一天前的日期</p>
+<pre class="r"><code>t&lt;-Sys.Date()
+as.POSIXlt(t-1)</code></pre>
+<pre><code>## [1] &quot;2019-06-18 UTC&quot;</code></pre>
+<p>##自定义时间格式</p>
+<pre class="r"><code>t&lt;-Sys.Date()
+format(t,format=&quot;%Y-%m-%d&quot;)</code></pre>
+<pre><code>## [1] &quot;2019-06-19&quot;</code></pre>
+<pre class="r"><code>format(t,format=&quot;%B-%d-%Y&quot;)</code></pre>
+<pre><code>## [1] &quot;六月-19-2019&quot;</code></pre>
 
     </div>
   </article>
@@ -93,6 +114,18 @@
 
     </div>
     
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
 
     
 
