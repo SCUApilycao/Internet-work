@@ -16,11 +16,8 @@ p1 <- ggplot(mpg, aes(x = hwy))
 p1 + geom_histogram()
 
 ##还可以上色和加拟合线
-p1 + geom_histogram(aes(fill = factor(year), y = ..density..),
-                    alpha = 0.3, colour = 'black') +
-  stat_density(geom = 'line', position = 'identity', size = 1.5,
-               aes(colour = factor(year))) +
-  facet_wrap(~ year, ncol = 1)
+p1 + geom_histogram(aes(fill = factor(year), y = ..density..),alpha = 0.3, colour = 'black') +
+stat_density(geom = 'line', position = 'identity', size = 1.5,aes(colour = factor(year))) +facet_wrap(~ year, ncol = 1)
 
 
 
